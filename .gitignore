@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Linting / Formatting
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive Data (credentials, secrets)
+*_hosts.json
+*_credentials.json
+*_auth.json
+os_info.txt
+secrets.json
+.env
+.env.*
+
+# Logs
+*.log
+execution_*.log
+install_results_*.json
+
+# Large binaries
+*.tar.gz
+*.zip
+*.tgz
+
+# Temp files
+tmp/
+temp/
+*.tmp
