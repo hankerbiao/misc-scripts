@@ -146,7 +146,7 @@ def get_node_metrics_json():
 
             elif hardware_type == "disk":
                 add_hardware(instance, "disk", hardware_item(
-                    name=labels.get("name", ""),
+                    name=labels.get("model", ""),
                     count=1,
                     vendor=labels.get("vendor", ""),
                     type_="disk_device",

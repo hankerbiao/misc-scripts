@@ -85,4 +85,4 @@ def call_full_pipeline(img_path):
 
 
 if __name__ == "__main__":
-    call_full_pipeline("./IMG_20260507_143000.jpg")
+    call_full_pipeline("./IMG_20260507_142952.jpg")
