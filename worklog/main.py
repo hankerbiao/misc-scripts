@@ -1,0 +1,19 @@
+import  requests
+
+url  = 'http://tl.cooacloud.com/worklog/tasks?timeshift=-480&uid=1781591196167&from=2026-01-01&to=2026-06-15'
+
+
+cookie = 'remember_token=libiao1|348082ba1e019ecfe9337b6962a9b4f2510418b7d45226aa4c0ceb51d4de88211f5986f86b1fb392402571a2f7120b2f44802c730f9279500742630283c51acd; check_box=true; access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTMzNDM4MywianRpIjoiZDFlYTRiYTktYWU5MS00NzA4LTg3MTEtNzhkOTA4MmNjZmYzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImxpYmlhbzEiLCJuYmYiOjE3NTEzMzQzODMsImV4cCI6MTc1MTkzOTE4MywibmFtZSI6Ilx1Njc0ZVx1NWY2YSIsImdyb3VwIjoyLCJyb2xlcyI6W10sInN0YXR1cyI6Ilx1NTcyOFx1ODA0YyIsImFkbWluIjpmYWxzZX0.cCk0WYulaRoYMtud-4phXLmERKIS4RncPSbhZ8LKgRQ; refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTMzNDM4MywianRpIjoiMDM0ZjY3YTUtMjU3Yi00YmE3LTgzNTItNTc2NzNlZTA1YWI1IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJsaWJpYW8xIiwibmJmIjoxNzUxMzM0MzgzLCJleHAiOjE3NjY4ODYzODN9.tYllfAwkRjPtH6RUIotsSM3wgxKSOA9-adQbktHFhLU; s_dmlv3_251=4RkAizhrZHn0-eWxDpjLjqHTPxG4pTydRvm_FxuJZ7I; session=eyJfZnJlc2giOmZhbHNlLCJfdXNlcl9pZCI6ImxpYmlhbzEifQ.ajDsmw.3F1UwB0trfHYXJ7AxfFY-_gN0wI; worklog=.eJw9T8tuAzEI_JWKcw5-gtlf6UaRF0OzUqpKcXyK8u_xtlIvAwwzGnjCxW61X7XD8vmEj8cs8K291y-FE6wDXS3rKFz87EnzOojcNhFLWgcXmgwThgOd-1f-ughpKrPlwyV2uLTZOqJzAc6v82mG37VfYXnch85pb7AAGSUJXpBlS-waV8MsokGKlYJBYzDvnclcBdTsqE4ie69ZVUomDZ64MVbOLKFVdj6SI1Ot3BIpepHEKag0jC2aYKJQSDgVi63Oty-j6_3vmtu-7fXHw-sNHRdX-A.ajDsmw.nIUny03aGWxAYjim7hQ52MrVU9k'
+
+
+headers = {
+    'Cookie': cookie
+}
+
+response = requests.get(url, headers=headers)
+data = response.json()['data']
+
+for description in data:
+    print(description['start_date'])
+    print(description['description'])
+    print('---'*20)
